@@ -1,7 +1,7 @@
 # --- General options --- #
 
 # Name of website
-title: IAmSarthakVerma
+title: Sarthak Verma
 
 # Short description of your site
 description: A virtual proof that I'm awesome
@@ -42,9 +42,9 @@ navbar-text-col: "#ffffff"
 navbar-children-col: "#F5F5F5"
 page-col: "#FFFFFF"
 link-col: "#6441A4"
-hover-col: "#0085A1"
-footer-col: "#F5F5F5"
-footer-text-col: "#777777"
+hover-col: "#6441A4"
+footer-col: "#6441A4"
+footer-text-col: "#ffffff"
 footer-link-col: "#404040"
 
 # Alternatively, the navbar, footer, and page background can be set to use background images
