@@ -19,14 +19,14 @@
 {% if layout.common-js %}
   {% for js in layout.common-js %}
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    <!-- {% if js contains 'jquery-' %}
+    {% if js contains 'jquery-' %}
       <script>
       	if (typeof jQuery == 'undefined') {
           document.write('<script src="{{ js | relative_url }}"></scr' + 'ipt>');
       	}
       </script>
-    {% else %} -->
+    {% else %}
       <script src="{{ js | relative_url }}"></script>
-    <!-- {% endif %} -->
+    {% endif %}
   {% endfor %}
 {% endif %}
