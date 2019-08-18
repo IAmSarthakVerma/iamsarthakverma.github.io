@@ -13,7 +13,23 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
           <ul class="nav navbar-nav menu_nav justify-content-end">
-            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+              {%- for link in site.navbar-links -%}
+              {%- if link[1].first %}
+                <li class="navlinks-container">
+                  <a class="navlinks-parent" href="javascript:void(0)">{{ link[0] }}</a>
+                  <div class="navlinks-children">
+                    {%- for childlink in link[1] -%}
+                    {%- for linkparts in childlink %}
+                    <a href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>
+                    {%- endfor -%}
+                    {%- endfor %}
+                  </div>
+                </li>
+              {% else %}
+                <li><a href="{{ link[1] | relative_url }}">{{ link[0] }}</a></li>
+              {%- endif -%}
+            {%- endfor -%}
+            <!-- <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
@@ -33,7 +49,7 @@
                 <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
               </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
           </ul>
         </div>
       </div>
