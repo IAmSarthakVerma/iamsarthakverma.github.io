@@ -15,9 +15,9 @@
           <ul class="nav navbar-nav menu_nav justify-content-end">
               {%- for link in site.navbar-links -%}
               {%- if link[1].first %}
-                <li class="navlinks-container">
-                  <a class="navlinks-parent" href="javascript:void(0)">{{ link[0] }}</a>
-                  <div class="navlinks-children">
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)">{{ link[0] }}</a>
+                  <div class="nav-item submenu dropdown">
                     {%- for childlink in link[1] -%}
                     {%- for linkparts in childlink %}
                     <a href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>
