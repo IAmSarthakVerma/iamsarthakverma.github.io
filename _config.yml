@@ -6,34 +6,16 @@ title: Sarthak Verma
 # Short description of your site
 description: A virtual proof that I'm awesome
 
-# --- Navigation bar options --- #
-
-# List of links in the navigation bar
-navbar-links:
-  Home: "index"
-  About: "about"
-  Blog: "#"
-  About Me: "aboutme"
-  Contact: "#"
-
-# Image to show in the navigation bar - image must be a square (width = height)
-# Remove this parameter if you don't want an image in the navbar
-avatar: "/img/avatar-icon.png"
-
-# If you want to have an image logo in the top-left corner instead of the title text,
-# then specify the following parameter
-# title-img: /path/to/image
-
 # --- Background colour/image options --- #
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#6441A4"
+navbar-col: "#ffffff"
 navbar-text-col: "#ffffff"
 navbar-children-col: "#F5F5F5"
 page-col: "#FFFFFF"
-link-col: "#6441A4"
-hover-col: "#6441A4"
+link-col: "#4458dc"
+hover-col: "#4458dc"
 footer-col: "#F5F5F5"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
@@ -80,10 +62,6 @@ share-links-active:
   twitter: true
   facebook: true
   linkedin: true
-
-# How to display the link to the website in the footer
-# Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
