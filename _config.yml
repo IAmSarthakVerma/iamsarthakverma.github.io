@@ -6,21 +6,12 @@ title: Sarthak Verma
 # Short description of your site
 description: A virtual proof that I'm awesome
 
-# --- Local development options ---
-# If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
-
-# url is the the website domain URL without a trailing slash
-# url: "iamsarthakverma.github.io"
-
-# baseurl should be an empty string
-#baseurl: ""
-
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
 navbar-links:
   Home: "index"
-  My Projects: "#"
+  About: "about"
   Blog: "#"
   About Me: "aboutme"
   Contact: "#"
