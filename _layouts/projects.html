@@ -1,0 +1,25 @@
+---
+layout: base
+---
+
+<!-- <div class="intro-header"></div> -->
+<div role="main" class="container">
+<section class="home_banner_area py-5">
+    <div class="banner_inner pb-5">
+        <div class="container">
+            <div class="row">
+                
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% for each_project in site.projects %}
+    <div>
+        <h1><a href="{{each_project.url}}">
+            {{ each_project.name }}
+        </a> </h1>
+    </div>
+{% endfor %}
+</div>
