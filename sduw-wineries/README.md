@@ -1,3 +1,8 @@
+---
+layout: page
+title: SDUW DIGITAL PASSPORT
+---
+
 # Digital Passport(for Wineries)
 
 
