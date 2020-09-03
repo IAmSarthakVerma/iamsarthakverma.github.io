@@ -26,12 +26,12 @@
 	  Preloader
 	-------------------------------------------------------------------------------*/
 
-	$(window).on('load', function() {
-		if ( $('.preloader').length ) {
+	$(window).on('load', function () {
+		if ($('.preloader').length) {
 			$('.preloader').fadeOut('slow');
 		}
 
-		if ( $('.a-intro').length ) {
+		if ($('.a-intro').length) {
 			$('.a-intro').addClass('active');
 		}
 	});
@@ -42,7 +42,7 @@
 	  Menu
 	-------------------------------------------------------------------------------*/
 
-	$('.a-nav-toggle').on('click', function(){
+	$('.a-nav-toggle').on('click', function () {
 		if ($('html').hasClass('body-menu-opened')) {
 			$('html').removeClass('body-menu-opened').addClass('body-menu-close');
 		} else {
@@ -56,18 +56,18 @@
 	  Pagepiling
 	-------------------------------------------------------------------------------*/
 
-	if ( $('.a-pagepiling').length ) {
+	if ($('.a-pagepiling').length) {
 		$('.a-pagepiling').pagepiling({
 			scrollingSpeed: 280,
 			menu: '#menu, #menuMain',
-			anchors: ['About', 'Services', 'Skills', 'Resume', 'Portfolio', 'Awards', 'Testimonials', 'Clients', 'Contact'],
+			anchors: ['About', 'Services', 'Skills', 'Portfolio', 'Awards', 'Testimonials', 'Clients', 'Contact'],
 			loopTop: false,
 			loopBottom: false,
 			navigation: {
 				'position': 'right'
 			},
-			onLeave: function(){
-				$('.a-progressbar .progress-bar').each(function() {
+			onLeave: function () {
+				$('.a-progressbar .progress-bar').each(function () {
 					if ($('.slide-skills').hasClass('active')) {
 						$(this).width($(this).attr('aria-valuenow') + '%');
 					} else {
@@ -87,7 +87,7 @@
 	-------------------------------------------------------------------------------*/
 
 	function typedText() {
-		$('.a-slide-typed').each(function() {
+		$('.a-slide-typed').each(function () {
 			var thisSlide = $(this);
 			if (thisSlide.hasClass('active')) {
 				var typedDiv = '.a-typed-' + thisSlide.data('name');
@@ -117,7 +117,7 @@
 	  Parallax
 	-------------------------------------------------------------------------------*/
 
-	if ( $('#a-parallax').length ) {
+	if ($('#a-parallax').length) {
 		var scene = document.getElementById('a-parallax');
 		var parallax = new Parallax(scene);
 	}
@@ -128,7 +128,7 @@
 	  Carousels
 	-------------------------------------------------------------------------------*/
 
-	if ( $('.a-portfolio-carousel').length ) {
+	if ($('.a-portfolio-carousel').length) {
 		var owl = $('.a-portfolio-carousel');
 		owl.owlCarousel({
 			items: 3,
@@ -138,21 +138,21 @@
 			dots: true,
 			nav: false,
 			dotData: false,
-			responsive:{
-				0:{
+			responsive: {
+				0: {
 					items: 1
 				},
-				600:{
+				600: {
 					items: 2
 				},
-				900:{
+				900: {
 					items: 3
 				}
 			}
 		});
 	}
 
-	if ( $('.a-testimonial-carousel').length ) {
+	if ($('.a-testimonial-carousel').length) {
 		var owl = $('.a-testimonial-carousel');
 		owl.owlCarousel({
 			items: 1,
@@ -171,20 +171,20 @@
 	-------------------------------------------------------------------------------*/
 
 	if ($('.a-form').length) {
-		$('.a-form').each(function(){
+		$('.a-form').each(function () {
 			$(this).validate({
 				errorClass: 'error',
-				submitHandler: function(form){
+				submitHandler: function (form) {
 					$.ajax({
 						type: "POST",
-						url:"mail.php",
+						url: "mail.php",
 						data: $(form).serialize(),
-						success: function() {
+						success: function () {
 							$('.form-group-message').show();
 							$('#error').hide();
 							$('#success').show();
 						},
-						error: function(){
+						error: function () {
 							$('.form-group-message').show();
 							$('#success').hide();
 							$('#error').show();
